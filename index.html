@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Kakes Studios</title>
+<meta name="description" content="Kakes Studios makes small, friendly puzzle games for Android, including Sudoku Sprint.">
+<link rel="icon" type="image/png" href="kakes-studios-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Bricolage+Grotesque:opsz,wght@12..96,600..800&display=swap">
+<style>
+:root{
+  --paper:#F1F3F7; --card:#FFFFFF; --ink:#16203A; --muted:#56627A; --line:#CDD4DF;
+  --accent:#2B5BD0; --on-accent:#FFFFFF; --soft:#E4EBFA; --sprint:#C4501A;
+  --shadow:0 1px 2px rgba(22,32,58,.06),0 8px 28px rgba(22,32,58,.08);
+  --display:"Bricolage Grotesque","Avenir Next","Segoe UI",system-ui,sans-serif;
+  --body:"Atkinson Hyperlegible",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+}
+@media (prefers-color-scheme:dark){
+  :root{--paper:#0D1220;--card:#151C2D;--ink:#E5EAF4;--muted:#8F9AB0;--line:#2A3449;--accent:#7FA3FF;--on-accent:#0A1022;--soft:#1B2643;--sprint:#FF8B4D;--shadow:none;color-scheme:dark}
+}
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--body);font-size:17px;line-height:1.55}
+a{color:var(--accent)}
+.wrap{max-width:760px;margin:0 auto;padding:0 16px}
+header.hero{background:linear-gradient(135deg,#3D6FE6 0%,#1D3FA6 100%);color:#fff}
+header.hero .wrap{display:flex;align-items:center;gap:18px;padding-top:40px;padding-bottom:40px}
+.studio-icon{width:76px;height:76px;border-radius:20px;flex:0 0 auto;box-shadow:0 6px 18px rgba(5,10,35,.35)}
+h1,h2,h3{font-family:var(--display);line-height:1.1;margin:0}
+.hero h1{font-size:clamp(30px,6vw,42px);font-weight:800;letter-spacing:-.02em}
+.hero p{margin:6px 0 0;opacity:.9;font-size:18px}
+main{padding:28px 0 8px;display:flex;flex-direction:column;gap:20px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:22px;padding:22px;box-shadow:var(--shadow)}
+.game{display:grid;grid-template-columns:96px minmax(0,1fr);gap:18px;align-items:start}
+.game img{width:96px;height:96px;border-radius:22px}
+.game h2{font-size:28px;font-weight:800}
+.tag{display:inline-block;margin-top:6px;font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:4px 10px;border-radius:999px;background:var(--soft);color:var(--accent)}
+.game p{margin:12px 0 0;color:var(--muted)}
+ul.feat{margin:14px 0 0;padding:0;list-style:none;display:grid;gap:8px}
+ul.feat li{position:relative;padding-left:26px}
+ul.feat li::before{content:"";position:absolute;left:4px;top:.55em;width:10px;height:10px;border-radius:3px;background:var(--accent)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;margin-top:18px;min-height:50px;padding:14px 22px;border-radius:14px;background:var(--accent);color:var(--on-accent);font-weight:700;text-decoration:none}
+.btn:hover{filter:brightness(1.08)}
+.links h3{font-size:20px;font-weight:800;margin-bottom:10px}
+.links ul{margin:0;padding:0;list-style:none;display:grid;gap:4px}
+.links a{display:block;padding:10px 0;font-weight:700;text-decoration:none;border-bottom:1px solid var(--line)}
+.links li:last-child a{border-bottom:0}
+.links a span{display:block;font-weight:400;font-size:15px;color:var(--muted)}
+footer{padding:24px 0 40px;color:var(--muted);font-size:15px;text-align:center}
+@media (max-width:480px){
+  .game{grid-template-columns:1fr}
+  .game img{width:80px;height:80px}
+  header.hero .wrap{padding-top:28px;padding-bottom:28px}
+  .studio-icon{width:60px;height:60px;border-radius:16px}
+}
+</style>
+</head>
+<body>
+<header class="hero">
+  <div class="wrap">
+    <img class="studio-icon" src="kakes-studios-icon.png" alt="Kakes Studios logo">
+    <div>
+      <h1>Kakes Studios</h1>
+      <p>Small, friendly puzzle games for Android.</p>
+    </div>
+  </div>
+</header>
+
+<div class="wrap">
+  <main>
+    <section class="card game" aria-labelledby="ss">
+      <img src="sudoku-sprint-icon.png" alt="Sudoku Sprint icon">
+      <div>
+        <h2 id="ss">Sudoku Sprint</h2>
+        <span class="tag">Free on Google Play</span>
+        <p>Endless sudoku puzzles, a new Daily Challenge every day, and a five-minute Sprint to race the clock against everyone.</p>
+        <ul class="feat">
+          <li>Daily Challenge with streaks and a leaderboard</li>
+          <li>Classic puzzles from Easy to Expert, plus a Relaxed mode</li>
+          <li>5-minute Sprint races on Google Play Games</li>
+          <li>Step-by-step walkthrough for new players</li>
+          <li>Dark mode and a colour-blind mode</li>
+        </ul>
+        <a class="btn" href="https://play.google.com/store/apps/details?id=com.kakesstudios.sudokusprint">Download on Google Play</a>
+      </div>
+    </section>
+
+    <section class="card links" aria-labelledby="legal">
+      <h3 id="legal">Sudoku Sprint policies</h3>
+      <ul>
+        <li><a href="https://claude.ai/artifact/11pNm6reyuam9vitJTs622">Privacy policy<span>What the game stores and your choices</span></a></li>
+        <li><a href="https://claude.ai/artifact/H1ts4WSgBqqV8Ppf91WXyg">Terms of use<span>Fair play, ads and the Remove ads purchase</span></a></li>
+        <li><a href="https://claude.ai/artifact/11pNm6reyuam9vitJTs622#delete-data">Delete your data<span>How to remove your game data and leaderboard scores</span></a></li>
+      </ul>
+    </section>
+  </main>
+  <footer>© 2026 Kakes Studios. Google Play is a trademark of Google LLC.</footer>
+</div>
+</body>
+</html>
